@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CapsuleShape" id=4]
+
+[sub_resource type="CapsuleMesh" id=6]
+
+[sub_resource type="CapsuleShape" id=3]
+
+[sub_resource type="CapsuleMesh" id=5]
+
+[node name="Demo3D" type="Spatial"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.43969, 18.1673 )
+
+[node name="Ground" type="StaticBody" parent="."]
+transform = Transform( 14.005, 0, 0, 0, 0.251582, 0, 0, 0, 15.4064, 0, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KinematicBodyCharacter" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.76088, 12.0492 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBodyCharacter"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBodyCharacter/CollisionShape"]
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="RigidBodyCharacter" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05495, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBodyCharacter"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBodyCharacter/CollisionShape"]
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null

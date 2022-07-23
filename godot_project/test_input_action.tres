@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://managers/input_manager/inputs/input_action_scalar.gd" type="Script" id=1]
+
+[sub_resource type="InputEventJoypadButton" id=1]
+device = 1
+
+[resource]
+script = ExtResource( 1 )
+name = ""
+_inputs = [ SubResource( 1 ) ]

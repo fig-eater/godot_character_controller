@@ -1,0 +1,35 @@
+{
+	"name": "Test Profile",
+	"actions": [
+		{
+			"type": "vector",
+			"name": "gameplay_move",
+			"left_composite_inputs": [
+
+			],
+			"up_composite_inputs": [
+
+			],
+			"right_composite_inputs": [
+
+			],
+			"down_composite_inputs": [
+
+			]
+		},
+		{
+			"type": "scalar",
+			"name": "gameplay_interact",
+			"inputs": [
+
+			]
+		},
+		{
+			"type": "scalar",
+			"name": "gameplay_jump",
+			"inputs": [
+
+			]
+		}
+	]
+}

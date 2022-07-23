@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/demo_2d/demo_2d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/demo_3d/demo_3d.tscn" type="PackedScene" id=3]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+_2d_scene = ExtResource( 2 )
+_3d_scene = ExtResource( 3 )
+_2d_demo_button_path = NodePath("VBoxContainer/HBoxContainer/2dDemoButton")
+_3d_demo_button_path = NodePath("VBoxContainer/HBoxContainer/3dDemoButton")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_left = 423.0
+margin_top = 233.0
+margin_right = 600.0
+margin_bottom = 247.0
+size_flags_horizontal = 4
+text = "Character Controller Demos"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 347.0
+margin_right = 1024.0
+margin_bottom = 367.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="2dDemoButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 390.0
+margin_right = 462.0
+margin_bottom = 20.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "2D Scene"
+
+[node name="3dDemoButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 562.0
+margin_right = 634.0
+margin_bottom = 20.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "3D Scene"

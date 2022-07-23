@@ -1,0 +1,20 @@
+extends Resource
+class_name InputAction
+
+export var name: String
+
+var prev_value
+
+var value
+
+func process_input(event:InputEvent)->void:
+	pass
+
+func get_value():
+	pass
+
+func get_scalar()->float:
+	return 0.0
+
+func get_vector()->Vector2:
+	return Vector2()
