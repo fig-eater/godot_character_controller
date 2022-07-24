@@ -4,16 +4,37 @@
 		{
 			"type": "vector",
 			"name": "gameplay_move",
-			"left_composite_inputs": [
+			"left_inputs": [
+				{
+					"type": "JoypadButton",
+					"button_index": 2
+				},
+				{
+					"type": "InputEventJoypadMotion",
+					"axis": 1
+				},
+				{
+					"type": "InputEventKey",
+					"scancode": "KEY_B",
+					"pysical_scancode": 123,
+					"unicode": 123
+				},
+				{
+					"type": "InputEventMouseButton",
+					"button_index": 312
+				}
+			],
+			"up_inputs": [
 
 			],
-			"up_composite_inputs": [
+			"right_inputs": [
 
 			],
-			"right_composite_inputs": [
+			"down_inputs": [
 
 			],
-			"down_composite_inputs": [
+
+			"native_inputs": [
 
 			]
 		},

@@ -1,8 +1,6 @@
 extends Resource
 class_name InputAction
 
-export var name: String
-
 var prev_value
 
 var value

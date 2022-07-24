@@ -33,19 +33,13 @@ _global_script_classes=[ {
 "class": "InputProfile",
 "language": "GDScript",
 "path": "res://managers/input_manager/input_profile.gd"
-}, {
-"base": "ResourceFormatSaver",
-"class": "ResourceFormatSaverInputProfileJSON",
-"language": "GDScript",
-"path": "res://resource_format_saver_input_profile_json.gd"
 } ]
 _global_script_class_icons={
 "Brain": "",
 "InputAction": "",
 "InputActionScalar": "",
 "InputActionVector": "",
-"InputProfile": "",
-"ResourceFormatSaverInputProfileJSON": ""
+"InputProfile": ""
 }
 
 [application]
