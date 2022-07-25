@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "gameplay_move"
-_left_composite_inputs = [ null, null ]
-_up_composite_inputs = [  ]
-_right_composite_inputs = [  ]
-_down_composite_inputs = [  ]
+_native_inputs = [  ]
+_left_inputs = [  ]
+_up_inputs = [  ]
+_right_inputs = [  ]
+_down_inputs = [  ]

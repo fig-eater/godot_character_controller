@@ -2,98 +2,106 @@
 	"name": "Test Profile",
 	"actions": [
 		{
-			"type": "vector",
+			"type": "Vector",
 			"name": "gameplay_move",
+			"native_inputs": [
+				{
+					"type": "MouseMotion"
+				}
+			],
 			"left_inputs": [
 				{
 					"type": "JoypadMotion",
-					"axis": "LX"
+					"axis": 0
 				}
 			],
 			"up_inputs": [
 				{
 					"type": "JoypadMotion",
-					"axis": "LY"
+					"axis": 1
 				}
 			],
-			"right_inputs": [],
-			"down_inputs": [],
-			"native_inputs": [
-				{ "type": "MouseMotion" }
+			"right_inputs": [
+
+			],
+			"down_inputs": [
+
 			]
 		},
 		{
-			"type": "vector",
+			"type": "Vector",
 			"name": "gameplay_move",
+			"native_inputs": [
+
+			],
 			"left_inputs": [
 				{
 					"type": "Key",
-					"scancode": "LEFT"
+					"scancode": 16777231
 				},
 				{
 					"type": "Key",
-					"scancode": "A"
+					"scancode": 65
 				},
 				{
 					"type": "JoypadButton",
-					"button_index": "DPAD_LEFT"
+					"button_index": 14
 				}
 			],
 			"up_inputs": [
 				{
 					"type": "Key",
-					"scancode": "UP"
+					"scancode": 16777232
 				},
 				{
 					"type": "Key",
-					"physical_scancode": "W"
+					"physical_scancode": 87
 				},
 				{
 					"type": "JoypadButton",
-					"button_index": "DPAD_UP"
+					"button_index": 12
 				}
 			],
 			"right_inputs": [
 				{
 					"type": "Key",
-					"scancode": "RIGHT"
+					"scancode": 16777233
 				},
 				{
 					"type": "Key",
-					"physical_scancode": "D"
+					"physical_scancode": 68
 				},
 				{
 					"type": "JoypadButton",
-					"button_index": "DPAD_RIGHT"
+					"button_index": 15
 				}
 			],
 			"down_inputs": [
 				{
 					"type": "Key",
-					"scancode": "DOWN"
+					"scancode": 16777234
 				},
 				{
 					"type": "Key",
-					"physical_scancode": "S"
+					"physical_scancode": 83
 				},
 				{
 					"type": "JoypadButton",
-					"button_index": "DPAD_DOWN"
+					"button_index": 13
 				}
-			],
-			"native_inputs": []
+			]
 		},
 		{
-			"type": "scalar",
+			"type": "Scalar",
 			"name": "gameplay_interact",
 			"inputs": [
 				{
 					"type": "Key",
-					"scancode": "SPACE"
+					"scancode": 32
 				},
 				{
 					"type": "JoypadButton",
-					"button_index": "XBOX_A"
+					"button_index": 0
 				}
 			]
 		}
