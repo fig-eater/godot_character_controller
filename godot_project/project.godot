@@ -14,32 +14,56 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://characters/brains/brain.gd"
 }, {
+"base": "RigidBody2D",
+"class": "CharacterRB2D",
+"language": "GDScript",
+"path": "res://character_controllers/character_rb2d.gd"
+}, {
 "base": "Resource",
 "class": "InputAction",
 "language": "GDScript",
-"path": "res://managers/input_manager/inputs/input_action.gd"
+"path": "res://addons/groak_games/input_manager/inputs/input_action.gd"
 }, {
 "base": "InputAction",
 "class": "InputActionScalar",
 "language": "GDScript",
-"path": "res://managers/input_manager/inputs/input_action_scalar.gd"
+"path": "res://addons/groak_games/input_manager/inputs/input_action_scalar.gd"
 }, {
 "base": "InputAction",
 "class": "InputActionVector",
 "language": "GDScript",
-"path": "res://managers/input_manager/inputs/input_action_vector.gd"
+"path": "res://addons/groak_games/input_manager/inputs/input_action_vector.gd"
 }, {
 "base": "Resource",
 "class": "InputProfile",
 "language": "GDScript",
-"path": "res://managers/input_manager/input_profile.gd"
+"path": "res://addons/groak_games/input_manager/input_profile.gd"
+}, {
+"base": "Reference",
+"class": "JsonInputProfileUtil",
+"language": "GDScript",
+"path": "res://addons/groak_games/input_manager_json_input_profiles/json_input_profile_util.gd"
+}, {
+"base": "ResourceFormatLoader",
+"class": "ResourceFormatLoaderJSONInputProfile",
+"language": "GDScript",
+"path": "res://addons/groak_games/input_manager_json_input_profiles/resouce_format_loader_json_input_profile.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "ResourceFormatSaverJSONInputProfile",
+"language": "GDScript",
+"path": "res://addons/groak_games/input_manager_json_input_profiles/resouce_format_saver_json_input_profile.gd"
 } ]
 _global_script_class_icons={
 "Brain": "",
+"CharacterRB2D": "",
 "InputAction": "",
 "InputActionScalar": "",
 "InputActionVector": "",
-"InputProfile": ""
+"InputProfile": "",
+"JsonInputProfileUtil": "",
+"ResourceFormatLoaderJSONInputProfile": "",
+"ResourceFormatSaverJSONInputProfile": ""
 }
 
 [application]
@@ -50,8 +74,12 @@ config/icon="res://icon.png"
 
 [autoload]
 
-InputManager="*res://managers/input_manager/input_manager.gd"
+InputManager="*res://addons/groak_games/input_manager/input_manager.gd"
 Test="*res://test.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/groak_games/input_manager/plugin.cfg", "res://addons/groak_games/input_manager_json_input_profiles/plugin.cfg" )
 
 [input]
 

@@ -20,12 +20,19 @@ var _players: Dictionary
 var _device_to_player_map: Dictionary
 
 
+func connect_input(player_id, action:String, target:Object, method:String, binds:=[], flags := 0)->int:
+	var player: InputPlayer =_players.get(player_id)
+	if player:
+		return player.profile.connect_input(action, target, method, binds, flags)
+	return ERR_DOES_NOT_EXIST
+
 # returns false if player has been created with given id
 func create_player(id, input_profile: InputProfile = null, devices: PoolIntArray = [])->bool:
 	if _players.has(id):
 		return false
 	if not input_profile:
 		input_profile = default_profile
+	input_profile.initialize()
 	var input_player = InputPlayer.new()
 	_players[id] = input_player
 	input_player.id = id
@@ -105,16 +112,16 @@ func _input(event:InputEvent):
 	# if event is InputEventJoypadButton:
 	# 	print((TEST_INPUT_ACTION._inputs[0] as InputEvent).shortcut_match(event, true))
 	# return
-	var player = null
+	var players
 	if event.device or event is InputEventJoypadMotion or event is InputEventJoypadButton:
-		player = _device_to_player_map.get(event.device)
+		players = _device_to_player_map.get(event.device, [])
 	elif event is InputEventMouse:
-		player = _device_to_player_map.get(DEVICE_MOUSE)
+		players = _device_to_player_map.get(DEVICE_MOUSE, [])
 	elif event is InputEventKey:
-		player = _device_to_player_map.get(DEVICE_KEYBOARD)
+		players = _device_to_player_map.get(DEVICE_KEYBOARD, [])
 
-	if player:
-		player.profile.process_input(event)
+	for p in players:
+		p.profile.process_input(event)
 
 
 

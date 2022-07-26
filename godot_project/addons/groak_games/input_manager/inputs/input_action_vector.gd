@@ -9,6 +9,11 @@ export(Array, InputEvent) var _up_inputs: Array
 export(Array, InputEvent) var _right_inputs: Array
 export(Array, InputEvent) var _down_inputs: Array
 
+var _last_input_native: bool = false
+
+func _init():
+	value = Vector2()
+
 func get_composite_input_arrays()->Array:
 	return [
 		# order matters based on input profile composite directions

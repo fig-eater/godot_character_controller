@@ -5,6 +5,8 @@ var prev_value
 
 var value
 
+var _event_handlers := []
+
 func process_input(event:InputEvent)->void:
 	pass
 

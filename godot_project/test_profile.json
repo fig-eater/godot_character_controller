@@ -3,7 +3,7 @@
 	"actions": [
 		{
 			"type": "vector",
-			"name": "gameplay_move",
+			"name": "cursor_move",
 			"left_inputs": [
 				{
 					"type": "JoypadMotion",
